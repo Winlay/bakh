@@ -41,9 +41,21 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+            phonedialer.dial(
+                    "221774223359",
+                    function (err) {
+                        if (err == "empty")
+                            alert("Unknown phone number");
+                        else
+                            alert("Dialer Error:" + err);
+                    },
+                    function (success) {
+                        alert('Dialing succeeded');
+                    }
+            );
         </script>
-        <a style="font-weight: bold; font-size: 18px" onclick="window.plugins.phoneDialer.dial('%23250%2311%23');">Crédit orange phone Dialer</a><br/><br/><br/>
-        <a style="font-weight: bold; font-size: 18px" onclick="callPhoneDialer();">Crédit orange phone Dialer</a><br/><br/><br/>
+        <a style="color:#000000; font-weight: bold; font-size: 18px" onclick="window.plugins.phoneDialer.dial('%23250%2311%23');">Crédit orange phone Dialer</a><br/><br/><br/>
+        <a style="color:#000000; font-weight: bold; font-size: 18px" onclick="callPhoneDialer();">Crédit orange phone Dialer</a><br/><br/><br/>
 
     </body>
 </html>
