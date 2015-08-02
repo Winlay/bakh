@@ -31,22 +31,8 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
         <script type="text/javascript" src="js/bootstrap.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            //app.initialize();
-            phonedialer.dial(
-                    "221774223359",
-                    function (err) {
-                        if (err == "empty")
-                            alert("Unknown phone number");
-                        else
-                            alert("Dialer Error:" + err);
-                    },
-                    function (success) {
-                        alert('Dialing succeeded');
-                    }
-            );
-        </script>
+        <!--<script type="text/javascript" src="js/index.js"></script>-->
+    
         <script type="text/javascript">
             function callPhoneDialer() {
                 phonedialer.dial(
@@ -67,11 +53,7 @@
     </head>
     <body>
         <div class="">
-            <!--            <h1>PhoneGap</h1>
-                        <div id="deviceready" class="blink">
-                            <p class="event listening">Connecting to Device</p>
-                            <p class="event received">Device is Ready</p>
-                        </div>-->
+          
             <div  style="text-align: center; vertical-align: middle">
                 <a class="btn btn-success" style="font-weight: bold; font-size: 18px" href="tel:#123#">Credit Orange</a><br/>
                 <a class="btn btn-success" style="font-weight: bold; font-size: 18px" href="tel:*222#">Credit Expresso</a><br/>
