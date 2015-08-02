@@ -32,7 +32,7 @@
         <script type="text/javascript" src="js/bootstrap.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-    
+
         <script type="text/javascript">
             function callPhoneDialer() {
                 phonedialer.dial(
@@ -53,24 +53,29 @@
     </head>
     <body>
         <div class="">
-            <!--            <h1>PhoneGap</h1>
+                        <h1>PhoneGap</h1>
                         <div id="deviceready" class="blink">
                             <p class="event listening">Connecting to Device</p>
                             <p class="event received">Device is Ready</p>
-                        </div>-->
+                        </div>
             <div  style="text-align: center; vertical-align: middle">
-                <a class="btn btn-success" style="font-weight: bold; font-size: 18px" href="tel:#123#">Credit Orange</a><br/>
-                <a class="btn btn-success" style="font-weight: bold; font-size: 18px" href="tel:*222#">Credit Expresso</a><br/>
-                <a class="btn btn-success" style="font-weight: bold; font-size: 18px" href="tel:#144#1#">Orange Money</a><br/>
-                <a class="btn btn-success" style="font-weight: bold; font-size: 18px" onclick="window.plugins.phoneDialer.dial('#250#11#');">Crédit orange phone Dialer</a><br/>
-                <a class="btn btn-success" style="font-weight: bold; font-size: 18px" onclick="window.plugins.phoneDialer.dial('%23250%2311%23');">Crédit orange phone Dialer</a><br/>
-                <a class="btn btn-success" style="font-weight: bold; font-size: 18px" onclick="callPhoneDialer();">Crédit orange phone Dialer</a><br/>
+                <h1>HREF</h1>
+                <a class="btn btn-success"  href="tel:%23123%23">Credit Orange</a><br/><br/>
+                <a class="btn btn-success"  href="tel:*222%23">Credit Expresso</a><br/><br/>
+            </div>
+            <div  style="text-align: center; vertical-align: middle">
+                <h1>PLUGIN</h1>
+                <a class="btn btn-success"  onclick="callPhoneDialer();">callPhoneDialer</a><br/><br/>
+                <a class="btn btn-success"  onclick="window.plugins.phoneDialer.dial('%23250%2311%23');">Crédit orange</a><br/><br/>
+                <a class="btn btn-success"  onclick="phoneDialer.dial('%23123%23');">Crédit orange</a><br/><br/>
             </div>
 
 
-            <a class="btn btn-danger" style="color:#000000; font-weight: bold; font-size: 18px" onclick="document.location.href = 'tel:%23250%2311%23'">Crédit orange phone Dialer</a><br/>
-            <a class="btn btn-danger" style="color:#000000; font-weight: bold; font-size: 18px" onclick="document.location.href = 'tel:#250#11#');">Crédit orange phone Dialer</a><br/>
-            <a class="btn btn-danger" style="color:#000000; font-weight: bold; font-size: 18px" onclick="document.location.href = 'tel:+221774223359'">Crédit orange phone Dialer</a><br/>
+            <div  style="text-align: center; vertical-align: middle">
+                <h1>ONCLICK</h1>
+                <a class="btn btn-danger"  onclick="document.location.href = 'tel:%23123%23'">doc loc href</a><br/><br/>
+                <a class="btn btn-danger"  onclick="document.location.href = 'tel:+221774223359'">doc loc href 422</a><br/><br/>
+            </div>
         </div>
         <br/>
         <br/>
