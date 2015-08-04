@@ -34,45 +34,35 @@
         <script type="text/javascript" src="js/index.js"></script>
 
         <script type="text/javascript">
-            function callPhoneDialer() {
-                phonedialer.dial(
-                        "221774223359",
-                        function (err) {
-                            if (err == "empty")
-                                alert("Unknown phone number");
-                            else
-                                alert("Dialer Error:" + err);
-                        },
-                        function (success) {
-                            alert('Dialing succeeded');
-                        }
-                );
+            var onSuccess=function(){
+
+               alert("invia messaggio");
+           };
+
+           function onError() {
+                alert('code: '    + error.code    + '\n' +
+                      'message: ' + error.message + '\n');
+            }
+            function executeCall(number) {
+                 window.plugins.CallNumber.callNumber(onSuccess, onError, number);
             }
         </script>
         <title>Hello World</title>
     </head>
     <body>
         <div class="">
-                        <h1>PhoneGap</h1>
-                        <div id="deviceready" class="blink">
-                            <p class="event listening">Connecting to Device</p>
-                            <p class="event received">Device is Ready</p>
-                        </div>
-            <div  style="text-align: center; vertical-align: middle">
-                <h1>HREF</h1>
-                <a class="btn btn-success"  href="tel:%23123%23">Credit Orange</a><br/><br/>
-                <a class="btn btn-success"  href="tel:*222%23">Credit Expresso</a><br/><br/>
-            </div>
+                        
+            
             <div  style="text-align: center; vertical-align: middle">
                 <h1>PLUGIN</h1>
                 <a class="btn btn-success"  onclick="callPhoneDialer();">callPhoneDialer</a><br/><br/>
-                <a class="btn btn-success"  onclick="window.plugins.phoneDialer.dial('%23250%2311%23');">Crédit orange</a><br/><br/>
-                <a class="btn btn-success"  onclick="phoneDialer.dial('%23123%23');">Crédit orange</a><br/><br/>
+                <a class="btn btn-success"  onclick="executeCall('%23250%2311%23');">Illimix</a><br/><br/>
+                <a class="btn btn-success"  onclick="executeCall('%23123%23');">Crédit orange</a><br/><br/>
             </div>
 
 
             <div  style="text-align: center; vertical-align: middle">
-                <h1>ONCLICK</h1>
+                <h1>ONCLICK location.hred</h1>
                 <a class="btn btn-danger"  onclick="document.location.href = 'tel:%23123%23'">doc loc href</a><br/><br/>
                 <a class="btn btn-danger"  onclick="document.location.href = 'tel:+221774223359'">doc loc href 422</a><br/><br/>
             </div>
